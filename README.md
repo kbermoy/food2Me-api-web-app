@@ -18,3 +18,5 @@ food2Me is a web application that searches resturants near you, by using a publi
 - I learned about the --webkit property in css, which gave me the ability to change the default style of the input slider
 - I learned that I was able to receive the actual value from the miles slider by just setting a min and max attribute to the input element, and accessing the value using the .value
 - After multiple tries of changing the pending state of a promise to a resolved phase, I realized that my logic was correct and rather I had a few spelling incorrections
+
+![food2Me-screenshot](https://github.com/kbermoy/food2Me-api-web-app/assets/108269273/daa0314f-7b9f-4534-a117-67f2102c51ae)
