@@ -1,15 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/db0f88908a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://raw.githubusercontent.com/amiad/screenshot.js/master/screenshot.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__img--wrapper">
+        <img src="./assets/backgroun--img.png" class="nav__bg--img" />
+      </div>
 
+      <div class="nav__container">
+        <div class="nav__top">
+          <div class="nav__logo">food2Me</div>
+          <ul class="nav__lists">
+            <li class="nav__list"><a href="" class="nav__link">Home</a></li>
+            <li class="nav__list">
+              <a href="" class="nav__link">Find a resturant</a>
+            </li>
+            <li class="nav__list">
+              <a href="" class="nav__link nav__link--primary">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__bottom">
+          <div class="nav__title">Nearby Resturants Near Me</div>
+          <div class="nav__search--input">
+            <!--form container-->
+            <form action="" class="formContainer">
+              <input
+                type="text"
+                min="0"
+                max="100"
+                onclick="search()"
+                placeholder="Enter City, or Zip Code"
+                class="nav__input"
+              />
+              <div class="input--btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30"
+                  width="30"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                  />
+                </svg>
+              </div>
+              <button class="btn--clear">
+                <span class="clear--text">x</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--main section | contains the resturants nearby-->
+    <main>
+      <header>
+        <h2 class="header__title">Resturants nearby:</h2>
+        <div class="miles__filter">
+          <h3 class="filter__title">
+            <span class="filter__title--txt">Mile range:</span>1 to
+            <span class="sliderVal">50</span> miles
+          </h3>
+          <div class="chrome">
+            <input type="range" min="0" max="100" id="myInput" />
+          </div>
+        </div>
+      </header>
 
-    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+      <div class="resturants__container">
+        <div class="resturants__row">
+          <div class="resturant">
+            <div class="img__wrapper"></div>
+            <div class="resturant__descriptions">
+              <div class="resturant__description--title">title placeholder</div>
+              <div class="description__line">
+                <i class="fas fa-bowl-food"></i>
+                <div class="resturant__description">
+                  cuisine placeholder
+                </div>
+              </div>
+              <div class="description__line">
+                <i class="fa-solid fa-address-book"></i>
+                <div class="resturant__description">
+                  address placeholder
+                </div>
+              </div>
+              <div class="description__line">
+                <i class="fa-regular fa-window-maximize"></i>
+                <div class="resturant__description">website</div>
+              </div>
+              <div class="description__line">
+                <i class="fa-solid fa-phone"></i>
+                <div class="resturant__description">phone</div>
+              </div>
+              <div class="description__line">
+                <i class="fa-solid fa-clock"></i>
+                <div class="resturant__description">hrs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
