@@ -1,7 +1,6 @@
 # food2Me-api-web-app
 food2Me is a web application that searches resturants near you, by using a public api url from rapidapi.com
 - This project purpose is to apply my knoweldge on using API's on frontend projects
-- Currently, the deployed product does not have the function to set a specific range of miles: this is what I'll be working on next
 
 ## Technologies Used
 - HTML/CSS: to set up web design and structure
@@ -18,4 +17,10 @@ food2Me is a web application that searches resturants near you, by using a publi
 - I learned that I was able to receive the actual value from the miles slider by just setting a min and max attribute to the input element, and accessing the value using the .value
 - After multiple tries of changing the pending state of a promise to a resolved phase, I realized that my logic was correct and rather I had a few spelling incorrections
 
-![food2Me-screenshot](https://github.com/kbermoy/food2Me-api-web-app/assets/108269273/daa0314f-7b9f-4534-a117-67f2102c51ae)
+  Completed Project on 12/11/2023
+
+
+
+
+https://github.com/kbermoy/food2Me-api-web-app/assets/108269273/b5cf49e2-ef88-4799-a5a0-55943205e74a
+
