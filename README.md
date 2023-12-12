@@ -2,7 +2,6 @@
 food2Me is a web application that searches resturants near you, by using a public api url from rapidapi.com
 - This project purpose is to apply my knoweldge on using API's on frontend projects
 - Currently, the deployed product does not have the function to set a specific range of miles: this is what I'll be working on next
-- The deployed website also does not have the function to search by a specific state or city: this is what I'bb be working on nect
 
 ## Technologies Used
 - HTML/CSS: to set up web design and structure
