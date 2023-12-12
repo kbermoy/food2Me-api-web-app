@@ -1,27 +1,16 @@
 const form = document.querySelector('.formContainer')
 const userInput = document.querySelector('.nav__input')
 const clearInput = document.querySelector('.btn--clear')
-const slider = document.getElementById('myInput')
-const sliderVal = document.querySelector('.sliderVal')
 const restaurantWrapper = document.querySelector('.resturants__row')
-
-/*
-    This block deals with the search input from the nav
-*/
+const nextPage = document.querySelector('.next--page--arrow')
+const prevPage = document.querySelector('.back--page--arrow')
 
 let locationUserInput = [`West%20Bloomfield` ,`mi`]
+let pageNumber = 0
 
-
-// this allows the background purple color to change with the slider thumb
-document.getElementById('myInput').oninput = function (){
-    let value = (this.value - this.min) / (this.max-this.min) * 100
-    this.style.background = 'linear-gradient(to right, #6030B1 0%, #6030B1 ' + value + '%, #fff ' + value + '%, white 100%)'
-    sliderVal.innerHTML = slider.value
-}
-
-// getting data from api
+// this function will make the url dynamic
 function url() {
-  return `https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/${locationUserInput[1]}/city/${locationUserInput[0]}/0`
+  return `https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/${locationUserInput[1]}/city/${locationUserInput[0]}/${pageNumber}`
 }
 
 function request() {
@@ -107,15 +96,23 @@ form.addEventListener('submit', e => {
   
   let inputValue = userInput.value
   userInput.value = ''
-
-  console.log(inputValue)
   
   locationUserInput = inputValue.split(', ')
+  clearSearch()
 
-  console.log(locationUserInput)
-  console.log(url())
-  url()
   rendorResturants()
 })
 
 clearInput.addEventListener('click', clearSearch)
+
+nextPage.addEventListener('click', () => {
+  pageNumber++
+  prevPage.classList += ' show-back-arrow'
+  rendorResturants()
+})
+
+prevPage.addEventListener('click', () => {
+  pageNumber--
+  if(pageNumber === 0) prevPage.classList.remove('show-back-arrow')
+  rendorResturants()
+})
